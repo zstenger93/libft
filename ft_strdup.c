@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:46:45 by zstenger          #+#    #+#             */
-/*   Updated: 2022/10/25 17:02:52 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:03:24 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	char	*str;
 	size_t	z;
 
-	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + 1));
+	str = malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!str)
 		return (NULL);
 	z = 0;
@@ -28,6 +28,6 @@ char	*ft_strdup(const char *s1)
 		str[z] = s1[z];
 		z++;
 	}
-	str[z] = 0;
+	str[z] = '\0';
 	return (str);
 }

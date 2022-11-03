@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 13:36:01 by zstenger          #+#    #+#             */
-/*   Updated: 2022/10/30 11:00:57 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/11/03 12:13:06 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 			str[t++] = s[count];
 		count++;
 	}
-	str[t] = 0;
+	str[t] = '\0';
 	return (str);
 }
