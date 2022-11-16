@@ -30,8 +30,8 @@ For detailed information, refer to the [**subject of this project**](https://git
 * [`ft_isascii`]			- test for ASCII character.
 * [`ft_isalnum`]			- alphanumeric character test.
 * [`ft_isalpha`]			- alphabetic character test.
-* [`ft_islower`] *	- lower-case character test.
-* [`ft_isupper`] *	- upper-case character test.
+* [`ft_islower`] 	- lower-case character test.
+* [`ft_isupper`] 	- upper-case character test.
 * [`ft_isdigit`]			- decimal-digit character test.
 * [`ft_isprint`]			- printing character test (space character inclusive).
 * [`ft_tolower`]			- upper case to lower case letter conversion.
@@ -57,8 +57,8 @@ For detailed information, refer to the [**subject of this project**](https://git
 * [`ft_strchr`]				- locate character in string (first occurrence).
 * [`ft_strrchr`]			- locate character in string (last occurence).
 * [`ft_strnstr`]			- locate a substring in a string (size-bounded)
-* [`ft_strncmp`] *			- compare strings (size-bounded).
-* [`ft_strncpy`] *	- copy strings (size-bounded).
+* [`ft_strncmp`] 			- compare strings (size-bounded).
+* [`ft_strncpy`] 	- copy strings (size-bounded).
 * [`ft_strdup`]				- save a copy of a string (with malloc).
 * [`ft_strlcpy`]			- size-bounded string copying.
 * [`ft_strlcat`]			- size-bounded string concatenation.
@@ -88,7 +88,7 @@ For detailed information, refer to the [**subject of this project**](https://git
 * [`ft_lstiter`]			- apply function to content of all list's elements.
 * [`ft_lstmap`]				- apply function to content of all list's elements into new list.
 
-_Note: functions marked with * are bonus functions (not mandatory by the project's subject)._
+_Note: bonus functions included._
 
 ---
 
