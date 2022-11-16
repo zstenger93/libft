@@ -4,7 +4,7 @@
 
 <p align="center">
 	<b><i>Development repo for 42cursus' libft project</i></b><br>
-	For further information about 42cursus and its projects, please refer to <a href="https://github.com/appinha/42cursus"><b>42cursus repo</b></a>.
+	For further information about 42cursus and its projects, please refer to <a href="https://github.com/zstenger93"><b>42cursus repo</b></a>.
 </p>
 
 <p align="center">
@@ -19,8 +19,6 @@
 ## 🗣️ About
 
 > _The aim of this project is to code a C library regrouping usual functions that you'll be allowed to use in all your other projects._
-
-For detailed information, refer to the [**subject of this project**](https://github.com/appinha/42cursus/tree/master/_PDFs).
 
 	🚀 TLDR: this project consists of coding basic C functions (see below), which are then compiled
 	into a library for use in other projects of the cursus.
