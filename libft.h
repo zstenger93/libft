@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:38:11 by zstenger          #+#    #+#             */
-/*   Updated: 2022/10/16 15:03:45 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/02 10:42:50 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "get_next_line.h"
+# include "get_next_line_bonus.h"
+# include "ft_printf.h"
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}			t_list;
+}t_list;
 
 int		ft_atoi(const char *str);
 

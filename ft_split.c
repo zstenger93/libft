@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 09:28:04 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/03 12:42:40 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/11/04 10:39:20 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static char	*ft_word_copy(const char *str, int start, int end)
 	int		z;
 
 	z = 0;
-	word = malloc(sizeof(char) * (end + 1));
+	word = malloc(sizeof(char) * (end - start + 1));
 	if (!word)
 		return (NULL);
 	while (start < end)

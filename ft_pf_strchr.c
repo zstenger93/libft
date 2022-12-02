@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_pf_strchr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:46:42 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/11 18:39:48 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/11/11 18:43:58 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include	"ft_printf.h"
 
-/* locates the first occurance of 'c' in the string pointed by 's' 
-(term null is part of the string) and returns a pointer to the character
-or NULL if the char isn't found in the string
-*/
 char	*ft_pf_strchr(const char *s, int c)
 {
 	int	z;

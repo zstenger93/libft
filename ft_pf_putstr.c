@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 19:46:42 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/11 18:39:48 by zstenger         ###   ########.fr       */
+/*   Created: 2022/11/07 12:13:51 by zstenger          #+#    #+#             */
+/*   Updated: 2022/11/11 18:40:31 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include	"ft_printf.h"
 
-/* locates the first occurance of 'c' in the string pointed by 's' 
-(term null is part of the string) and returns a pointer to the character
-or NULL if the char isn't found in the string
+/*
+print out null if no string after the format specifier
+or print the length of the string until the terminating
+null
 */
-char	*ft_pf_strchr(const char *s, int c)
+void	ft_pf_putstr(char *str, int *input_len)
 {
-	int	z;
+	int	length;
 
-	z = 0;
-	while (s[z])
+	if (!str)
 	{
-		if (s[z] == (char)c)
-			return ((char *)(s + z));
-		z++;
+		ft_pf_putstr("(null)", input_len);
+		return ;
 	}
-	if (s[z] == (char)c)
-		return ((char *)(s + z));
-	return (NULL);
+	length = 0;
+	while (str[length] != '\0')
+	{
+		ft_pf_putchar(str[length], input_len);
+		length++;
+	}
 }

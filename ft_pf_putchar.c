@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_pf_putchar.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 19:46:42 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/11 18:39:48 by zstenger         ###   ########.fr       */
+/*   Created: 2022/11/07 12:11:45 by zstenger          #+#    #+#             */
+/*   Updated: 2022/11/12 10:38:16 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include	"ft_printf.h"
 
-/* locates the first occurance of 'c' in the string pointed by 's' 
-(term null is part of the string) and returns a pointer to the character
-or NULL if the char isn't found in the string
+/*
+writing chars and for calculating the length of the string
 */
-char	*ft_pf_strchr(const char *s, int c)
+void	ft_pf_putchar(char c, int *input_len)
 {
-	int	z;
-
-	z = 0;
-	while (s[z])
-	{
-		if (s[z] == (char)c)
-			return ((char *)(s + z));
-		z++;
-	}
-	if (s[z] == (char)c)
-		return ((char *)(s + z));
-	return (NULL);
+	*input_len += write(1, &c, 1);
 }

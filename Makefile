@@ -1,16 +1,5 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/03 09:57:42 by zstenger          #+#    #+#              #
-#    Updated: 2022/11/03 11:44:33 by zstenger         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
-NAME	= libft.a
+NAME=libft.a
 
 SRC		=	ft_isalnum.c	ft_isprint.c	ft_memcmp.c		ft_putchar_fd.c \
 			ft_strlcat.c 	ft_strncmp.c 	ft_substr.c 	ft_atoi.c \
@@ -39,7 +28,10 @@ CFLAGS	= -Wall -Wextra -Werror
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-		ar -rcs $(NAME) $(OBJ)
+		ar rcs $(NAME) $(OBJ)
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus:	$(OBJ) $(BONUS_OBJ)
 		ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
@@ -50,6 +42,6 @@ clean:
 fclean:	clean
 		$(RM) $(NAME)
 
-re:	fclean $(NAME)
+re:	fclean all
 
 .PHONY:	all bonus clean fclean re
