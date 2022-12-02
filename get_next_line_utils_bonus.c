@@ -6,11 +6,11 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 09:56:25 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/17 16:53:20 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/02 11:51:40 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"get_next_line_bonus.h"
+#include	"get_next_line.h"
 
 //get the length of the line and resource
 size_t	ft_strlen(const char *theline)

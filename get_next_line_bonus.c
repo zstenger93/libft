@@ -6,11 +6,11 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 09:56:51 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/16 18:22:33 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/02 11:51:50 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"get_next_line_bonus.h"
+#include	"get_next_line.h"
 
 /*
 allocate memory for buffer size+1, check if its ok
