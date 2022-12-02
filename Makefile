@@ -9,7 +9,14 @@ SRC		=	ft_isalnum.c	ft_isprint.c	ft_memcmp.c		ft_putchar_fd.c \
 			ft_calloc.c  	ft_isdigit.c 	ft_memchr.c  	ft_memset.c	\
 			ft_strjoin.c 	ft_strmapi.c 	ft_strtrim.c	ft_striteri.c \
 			ft_putstr_fd.c	ft_split.c		ft_isalpha.c	ft_strlcpy.c \
-			ft_memmove.c	ft_toupper.c
+			ft_memmove.c	ft_toupper.c 	ft_strstr.c \
+			ft_lstadd_back.c	ft_lstadd_front.c			ft_lstclear.c  \
+			ft_lstdelone.c 		ft_lstiter.c 				ft_lstlast.c  \
+			ft_lstmap.c 		ft_lstnew.c 				ft_lstsize.c \
+			get_next_line.c		get_next_line_utils.c		ft_printf.c \
+			ft_pf_putchar.c 	ft_pf_putnbr.c 				ft_pf_putstr.c \
+			ft_pf_strchr.c 		ft_print_hex.c	get_next_line_bonus.c \
+			get_next_line_utils_bunos.c
 
 OBJ		= $(SRC:.c=.o)
 

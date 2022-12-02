@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 13:40:21 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/03 12:23:44 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/02 11:57:35 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 allocates memory for the concatenation of s1 and s2 and returns the new string.
 if the allocation fails return null
 */
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_nm_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	size_t	z;
