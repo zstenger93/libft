@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:38:11 by zstenger          #+#    #+#             */
-/*   Updated: 2022/12/02 13:21:07 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/02 13:53:07 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "get_next_line.h"
-# include "get_next_line_bonus.h"
 # include "ft_printf.h"
 
 typedef struct s_list
