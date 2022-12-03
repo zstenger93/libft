@@ -15,8 +15,8 @@ SRC		=	ft_isalnum.c	ft_isprint.c	ft_memcmp.c		ft_putchar_fd.c \
 			ft_lstmap.c 		ft_lstnew.c 				ft_lstsize.c \
 			get_next_line.c		get_next_line_utils.c		ft_printf.c \
 			ft_pf_putchar.c 	ft_pf_putnbr.c 				ft_pf_putstr.c \
-			ft_pf_strchr.c 		ft_print_hex.c	get_next_line_bonus.c \
-			get_next_line_utils_bonus.c						ft_gnlinelen.c \
+			ft_pf_strchr.c 		ft_print_hex.c	 \
+								ft_gnlinelen.c \
 			ft_check_format.c
 
 OBJ		= $(SRC:.c=.o)

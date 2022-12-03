@@ -6,12 +6,12 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:48:07 by zstenger          #+#    #+#             */
-/*   Updated: 2022/12/03 18:01:34 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/03 18:05:43 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"get_next_line.h"
-#include "libft.h"
+
 
 /*
 allocate memory for buffer size+1, check if its ok
@@ -33,7 +33,7 @@ char	*ft_read_file(int fd, char *resource)
 	{
 		reading_bytes = read(fd, buffer, BUFFER_SIZE);
 		buffer[reading_bytes] = '\0';
-		resource = ft_strjoin(resource, buffer);
+		resource = ft_gnl_strjoin(resource, buffer);
 	}
 	free(buffer);
 	return (resource);
@@ -60,7 +60,7 @@ char	*ft_remove_line(char *buffer)
 		free(buffer);
 		return (NULL);
 	}
-	file_minus_line = malloc(sizeof(char) * (ft_strlen(buffer) - z + 1));
+	file_minus_line = malloc(sizeof(char) * (ft_gnl_strlen(buffer) - z + 1));
 	if (!file_minus_line)
 		return (NULL);
 	z++;
