@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:46:52 by zstenger          #+#    #+#             */
-/*   Updated: 2022/10/22 14:58:54 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/03 19:18:57 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,18 @@
 /*
 copies from src to dst until size - 1 (for null) an returns the string
 */
-size_t	ft_strlcpy(char	*dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	z;
+	size_t	a;
 
-	z = 0;
-	if (size > 0)
+	a = 0;
+	if (size == 0)
+		return (ft_strlen(src));
+	while (a < size - 1 && src[a])
 	{
-		while (src[z] && z < (size - 1))
-		{
-			dst[z] = src[z];
-			z++;
-		}
-		dst[z] = 0;
+		dst[a] = src[a];
+		a++;
 	}
-	while (src[z])
-		z++;
-	return (z);
+	dst[a] = 0;
+	return (ft_strlen(src));
 }
