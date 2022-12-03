@@ -6,24 +6,14 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 12:48:10 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/17 16:53:22 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/03 18:01:14 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"get_next_line.h"
-
+#include "libft.h"
 //get the length of the line and resource
-size_t	ft_strlen(const char *theline)
-{
-	int	z;
 
-	if (!theline)
-		return (0);
-	z = 0;
-	while (theline[z] != '\0')
-		z++;
-	return (z);
-}
 
 // for finding the '\n' 
 char	*gnl_strchr(char *string, int lookfor)
