@@ -6,24 +6,25 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 12:48:10 by zstenger          #+#    #+#             */
-/*   Updated: 2022/12/03 18:05:14 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/19 11:49:26 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"get_next_line.h"
+#include "libft.h"
 
 //get the length of the line and resource
-size_t	ft_gnl_strlen(const char *theline)
-{
-	int	z;
+// size_t	ft_strlen(const char *theline)
+// {
+// 	int	z;
 
-	if (!theline)
-		return (0);
-	z = 0;
-	while (theline[z] != '\0')
-		z++;
-	return (z);
-}
+// 	if (!theline)
+// 		return (0);
+// 	z = 0;
+// 	while (theline[z] != '\0')
+// 		z++;
+// 	return (z);
+// }
 
 // for finding the '\n' 
 char	*gnl_strchr(char *string, int lookfor)
@@ -62,7 +63,7 @@ char	*ft_gnl_strjoin(char *resource, char *buffer)
 	}
 	if (!buffer || !resource)
 		return (NULL);
-	str = malloc(sizeof(char) * (ft_gnl_strlen(resource) + ft_gnl_strlen(buffer) + 1));
+	str = malloc(sizeof(char) * (ft_strlen(resource) + ft_strlen(buffer) + 1));
 	if (!str)
 		return (NULL);
 	i = -1;
@@ -72,7 +73,7 @@ char	*ft_gnl_strjoin(char *resource, char *buffer)
 			str[i] = resource[i];
 	while (buffer[j] != '\0')
 		str[i++] = buffer[j++];
-	str[ft_gnl_strlen(resource) + ft_gnl_strlen(buffer)] = '\0';
+	str[ft_strlen(resource) + ft_strlen(buffer)] = '\0';
 	free(resource);
 	return (str);
 }
