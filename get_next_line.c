@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:48:07 by zstenger          #+#    #+#             */
-/*   Updated: 2022/12/11 20:04:40 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/22 12:14:34 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_remove_line(char *buffer)
 		free(buffer);
 		return (NULL);
 	}
-	file_minus_line = malloc(sizeof(char) * (ft_gnl_strlen(buffer) - z + 1));
+	file_minus_line = malloc(sizeof(char) * (ft_strlen(buffer) - z + 1));
 	if (!file_minus_line)
 		return (NULL);
 	z++;
