@@ -6,11 +6,12 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:48:07 by zstenger          #+#    #+#             */
-/*   Updated: 2022/12/22 12:14:34 by zstenger         ###   ########.fr       */
+/*   Updated: 2022/12/22 13:56:59 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"get_next_line.h"
+#include	"libft.h"
 
 /*
 allocate memory for buffer size+1, check if its ok
