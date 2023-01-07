@@ -22,7 +22,7 @@ long	ft_atol(char *str)
 		i++;
 	}
 	res = res * sign;
-	ft_check_invalid_chars(str);
-	ft_check_num_range(res);
+	invalid_char_check(str);
+	valid_int(res);
 	return (res);
 }
