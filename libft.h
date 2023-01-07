@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:38:11 by zstenger          #+#    #+#             */
-/*   Updated: 2022/12/03 14:25:07 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/07 18:48:05 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 # include "get_next_line.h"
 # include "ft_printf.h"
 
@@ -27,6 +28,12 @@ typedef struct s_list
 size_t	ft_gnlinelen(const char *line);
 
 int		ft_atoi(const char *str);
+
+long	ft_atol(char *str);
+
+void	valid_int(long res);
+
+void	invalid_char_check(char *str);
 
 void	ft_bzero(void *s, size_t n);
 
