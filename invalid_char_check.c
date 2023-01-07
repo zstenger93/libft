@@ -15,7 +15,7 @@ void	invalid_char_check(char *str)
 		return ;
 	while (str[i] != '\0')
 	{
-		if (!ft_is_digit(str[i]))
+		if (!ft_isdigit(str[i]))
 			return ;
 		i++;
 	}
