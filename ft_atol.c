@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:17:59 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/10 17:18:25 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:20:30 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ long	ft_atol(char *str)
 	sign = 1;
 	res = 0;
 	if (str[0] == '\0')
-		return(1);
+		return (1);
 	if (str[i] == '-')
 	{
 		sign *= (-1);
