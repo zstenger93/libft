@@ -35,7 +35,7 @@ CFLAGS	= -Wall -Wextra -Werror
 
 all:	$(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME): $(OBJ)
 		ar rcs $(NAME) $(OBJ)
 
 %.o : %.c
@@ -45,7 +45,7 @@ bonus:	$(OBJ) $(BONUS_OBJ)
 		ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean:
-		$(RM) $(OBJ) $(BONUS_OBJ)
+	$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean:	clean
 		$(RM) $(NAME)
