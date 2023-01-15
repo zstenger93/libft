@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:45:48 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/11 11:59:15 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/15 17:17:31 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ int	ft_atoi(const char *str)
 	z = 0;
 	res = 0;
 	sign = 1;
-	while (str[z] == ' ' || str[z] == '\f'
-		|| str[z] == '\n' || str[z] == '\r'
+	while (str[z] == ' ' || str[z] == '\f' || str[z] == '\n' || str[z] == '\r'
 		|| str[z] == '\t' || str[z] == '\v')
 			z++;
 	if (str[z] == '-')
@@ -47,5 +46,7 @@ int	ft_atoi(const char *str)
 		res = res * 10 + str[z] - '0';
 		z++;
 	}
+	if ((res * sign) > 2147483647 || (res * sign) < -2147483648)
+		error();
 	return (res * sign);
 }
