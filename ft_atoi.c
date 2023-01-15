@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:45:48 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/15 17:51:29 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/15 18:08:04 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ int	ft_atoi(const char *str)
 	z = 0;
 	res = 0;
 	sign = 1;
-	if (str > 2147483647 || str < -2147483648)
-		error();
 	while (str[z] == ' ' || str[z] == '\f' || str[z] == '\n' || str[z] == '\r'
 		|| str[z] == '\t' || str[z] == '\v')
 			z++;
