@@ -6,14 +6,15 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:16:15 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/15 17:19:54 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:05:29 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	error(void)
+void	error(int *list)
 {
 	ft_printf("\e[1;4;31mError!\e[0m\n");
+	free(list);
 	exit(1);
 }

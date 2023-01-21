@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:38:11 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/15 18:35:36 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:06:16 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ typedef struct s_list
 	struct s_list	*next;
 }t_list;
 
-void	error(void);
+void	error(int *list);
 
 size_t	ft_gnlinelen(const char *line);
 
 int		ft_atoi(const char *str);
 
-int		ft_atoi2(const char *str);
+int		ft_atoi2(const char *str, int *list);
 
 long	ft_atol(char *str);
 

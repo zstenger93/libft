@@ -6,13 +6,13 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 18:35:01 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/15 18:38:27 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:06:33 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi2(const char *str)
+int	ft_atoi2(const char *str, int *list)
 {
 	int	z;
 	int	res;
@@ -34,7 +34,7 @@ int	ft_atoi2(const char *str)
 		res = res * 10 + str[z] - '0';
 		z++;
 		if (res < temp)
-			error();
+			error(list);
 	}
 	return (res * sign);
 }
