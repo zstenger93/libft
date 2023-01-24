@@ -5,35 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 12:14:33 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/24 12:14:50 by zstenger         ###   ########.fr       */
+/*   Created: 2022/10/13 13:40:21 by zstenger          #+#    #+#             */
+/*   Updated: 2022/12/02 11:57:35 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+/*
+allocates memory for the concatenation of s1 and s2 and returns the new string.
+if the allocation fails return null
+*/
+char	*ft_nm_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		total;
-	int		i;
-	int		j;
+	size_t	z;
+	size_t	s;
 
-	i = 0;
-	j = 0;
-	if (s2 == NULL)
-		return (s1);
-	total = ft_strlen(s1) + ft_strlen(s2) + 1;
-	str = (char *) malloc(total * sizeof(char));
-	if (str == NULL)
+	if (!s1 || !s2)
 		return (NULL);
-	while (s1[j])
-		str[i++] = s1[j++];
-	j = 0;
-	while (s2[j])
-		str[i++] = s2[j++];
-	str[i] = 0;
-	free(s1);
-	free(s2);
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (NULL);
+	z = 0;
+	s = 0;
+	while (s1[z])
+	{
+		str[s++] = s1[z];
+		z++;
+	}
+	z = 0;
+	while (s2[z])
+	{
+		str[s++] = s2[z];
+		z++;
+	}
+	str[s] = '\0';
 	return (str);
 }
