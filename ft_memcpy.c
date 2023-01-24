@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:46:34 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/03 10:40:55 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:05:42 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,13 @@ undefined
 */
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	z;
+	size_t	i;
 
-	if (!dst && !src)
-		return (NULL);
-	z = 0;
-	while (z < n)
+	i = 0;
+	while (i < n && dst != src)
 	{
-		*(char *)(dst + z) = *(char *)(src + z);
-		z++;
+		((uint8_t *)dst)[i] = ((uint8_t *)src)[i];
+		i++;
 	}
 	return (dst);
 }
