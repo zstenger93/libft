@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:38:11 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/21 15:06:16 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/24 10:31:50 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t n);
 
 size_t	ft_strlen(const char *s);
+
+int		readstdin(char **line);
 
 int		ft_strcmp(char *s1, char *s2);
 
