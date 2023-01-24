@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:38:11 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/24 10:31:50 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/24 12:17:12 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,8 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 char	*ft_nm_strjoin(char const *s1, char const *s2);
+
+char	*ft_strjoin(char *s1, char *s2);
 
 char	*ft_strtrim(char const *s1, char const *set);
 
