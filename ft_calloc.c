@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:46:10 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/15 17:21:23 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/24 10:57:56 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,9 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*ptr;
 	size_t	max;
 
-	if (size > 0 && (SIZE_MAX / size) < count)
-		return (NULL);
 	max = size * count;
 	ptr = malloc(max);
-	if (ptr == NULL)
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, max);
 	return (ptr);
