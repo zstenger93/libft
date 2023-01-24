@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:46:45 by zstenger          #+#    #+#             */
-/*   Updated: 2022/11/03 11:03:24 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/24 10:54:42 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,13 @@
 returns a pointer to the copy */
 char	*ft_strdup(const char *s1)
 {
-	char	*str;
-	size_t	z;
+	size_t	len;
+	char	*copy;
 
-	str = malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (!str)
+	len = ft_strlen((char *)s1) + 1;
+	copy = ft_calloc(len + 1, sizeof(char));
+	if (!copy)
 		return (NULL);
-	z = 0;
-	while (s1[z])
-	{
-		str[z] = s1[z];
-		z++;
-	}
-	str[z] = '\0';
-	return (str);
+	ft_memcpy(copy, s1, len);
+	return (copy);
 }
