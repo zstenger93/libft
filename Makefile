@@ -18,7 +18,7 @@ SRC		=	ft_isalnum.c	ft_isprint.c	ft_memcmp.c		ft_putchar_fd.c \
 			ft_pf_strchr.c 		ft_print_hex.c				ft_atol.c \
 			ft_gnlinelen.c		ft_check_format.c			valid_int.c \
 			invalid_char_check.c	ft_strcmp.c				error.c \
-			readstdin.c ft_nm_strjoin.c
+			readstdin.c ft_nm_strjoin.c	verror.c
 
 OBJ		= $(SRC:.c=.o)
 

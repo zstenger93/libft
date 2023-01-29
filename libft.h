@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:38:11 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/24 12:17:12 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/01/29 10:55:22 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }t_list;
+
+void	verror(void);
 
 void	error(int *list);
 
