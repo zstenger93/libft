@@ -1,5 +1,8 @@
 <h1 align="center">
-	42cursus' libft
+	<p>
+	📖 LIBFT
+	</p>
+	<img src="https://badge42.vercel.app/api/v2/cl9sfj1oy00110fjrw3eky83q/project/2829068">
 </h1>
 
 <p align="center">
