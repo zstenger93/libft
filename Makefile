@@ -8,7 +8,7 @@ CONVERT = 	src/convert_int_str/ft_atoi.c		src/convert_int_str/ft_itoa.c	src/conv
 
 ERRORS = 	src/errors/error.c					src/errors/verror.c \
 
-GNL	= 		src/gnl/get_next_line.c				src/gnl/ft_gnlinelen.c			src/gnl/get_next_line_utils.c\
+GNL	= 		src/gnl/get_next_line.c				src/gnl/ft_gnlinelen.c			src/gnl/get_next_line_utils.c \
 
 IS_TO = 	src/is_to/ft_isalnum.c				src/is_to/ft_isprint.c			src/is_to/ft_tolower.c \
 			src/is_to/ft_isascii.c				src/is_to/ft_isalpha.c			src/is_to/ft_isdigit.c \
@@ -36,7 +36,7 @@ STR =   	src/str/ft_strlcat.c				src/str/ft_strncmp.c			src/str/ft_substr.c	\
 			src/str/ft_strlcpy.c				src/str/ft_strstr.c				src/str/ft_nm_strjoin.c \
 			src/str/ft_striteri.c \
 
-UTILS = 	src/utils/valid_int.c				src/utils/readstdin.c			src/utils/invalid_char_check.c\
+UTILS = 	src/utils/valid_int.c				src/utils/readstdin.c			src/utils/invalid_char_check.c \
 
 SRC	= 		$(CONVERT)	$(ERRORS)	$(GNL) \
 			$(IS_TO) 	$(LIST) 	$(MEM) \
