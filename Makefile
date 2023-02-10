@@ -1,55 +1,63 @@
+CC	= 		cc
+RM	= 		rm -f
+CFLAGS	= 	-Wall -Wextra -Werror
+NAME = 		libft.a
 
-NAME=libft.a
+CONVERT = 	src/convert_int_str/ft_atoi.c		src/convert_int_str/ft_itoa.c	src/convert_int_str/ft_atol.c \
+			src/convert_int_str/ft_atoi2.c		src/convert_int_str/ft_split.c \
 
-SRC		=	ft_isalnum.c	ft_isprint.c	ft_memcmp.c		ft_putchar_fd.c \
-			ft_strlcat.c 	ft_strncmp.c 	ft_substr.c 	ft_atoi.c \
-			ft_itoa.c		ft_memcpy.c  	ft_putendl_fd.c ft_strchr.c \
-			ft_strnstr.c 	ft_tolower.c 	ft_bzero.c   	ft_isascii.c \
-			ft_putnbr_fd.c  ft_strdup.c  	ft_strlen.c  	ft_strrchr.c \
-			ft_calloc.c  	ft_isdigit.c 	ft_memchr.c  	ft_memset.c	\
-			ft_strjoin.c 	ft_strmapi.c 	ft_strtrim.c	ft_striteri.c \
-			ft_putstr_fd.c	ft_split.c		ft_isalpha.c	ft_strlcpy.c \
-			ft_atoi2.c		ft_memmove.c	ft_toupper.c 	ft_strstr.c \
-			ft_lstadd_back.c	ft_lstadd_front.c			ft_lstclear.c  \
-			ft_lstdelone.c 		ft_lstiter.c 				ft_lstlast.c  \
-			ft_lstmap.c 		ft_lstnew.c 				ft_lstsize.c \
-			get_next_line.c		get_next_line_utils.c		ft_printf.c \
-			ft_pf_putchar.c 	ft_pf_putnbr.c 				ft_pf_putstr.c \
-			ft_pf_strchr.c 		ft_print_hex.c				ft_atol.c \
-			ft_gnlinelen.c		ft_check_format.c			valid_int.c \
-			invalid_char_check.c	ft_strcmp.c				error.c \
-			readstdin.c ft_nm_strjoin.c	verror.c
+ERRORS = 	src/errors/error.c					src/errors/verror.c \
 
-OBJ		= $(SRC:.c=.o)
+GNL	= 		src/gnl/get_next_line.c				src/gnl/ft_gnlinelen.c			src/gnl/get_next_line_utils.c\
 
-BONUS	=	ft_lstadd_back.c	ft_lstadd_front.c	ft_lstclear.c  \
-			ft_lstdelone.c 		ft_lstiter.c 		ft_lstlast.c  \
-			ft_lstmap.c 		ft_lstnew.c 		ft_lstsize.c
+IS_TO = 	src/is_to/ft_isalnum.c				src/is_to/ft_isprint.c			src/is_to/ft_tolower.c \
+			src/is_to/ft_isascii.c				src/is_to/ft_isalpha.c			src/is_to/ft_isdigit.c \
+			src/is_to/ft_toupper.c \
 
-BONUS_OBJ	= $(BONUS:.c=.o)
+LIST = 		src/list/ft_lstmap.c 				src/list/ft_lstnew.c			src/list/ft_lstsize.c \
+			src/list/ft_lstdelone.c 			src/list/ft_lstiter.c 			src/list/ft_lstlast.c \
+			src/list/ft_lstadd_back.c			src/list/ft_lstclear.c			src/list/ft_lstadd_front.c \
 
-CC	= cc
+MEM =  		src/mem/ft_memcmp.c					src/mem/ft_memcpy.c				src/mem/ft_bzero.c \
+			src/mem/ft_memchr.c  				src/mem/ft_memset.c				src/mem/ft_calloc.c \
+			src/mem/ft_memmove.c \
 
-RM	= rm -f
+PRINTF = 	src/printf/ft_pf_putchar.c 			src/printf/ft_pf_putnbr.c		src/printf/ft_pf_putstr.c \
+			src/printf/ft_print_hex.c			src/printf/ft_printf.c			src/printf/ft_pf_strchr.c \
+			src/printf/ft_check_format.c \
 
-CFLAGS	= -Wall -Wextra -Werror
+PUTFD =		src/putfd/ft_putchar_fd.c			src/putfd/ft_putendl_fd.c		src/putfd/ft_putnbr_fd.c \
+			src/putfd/ft_putstr_fd.c \
+
+STR =   	src/str/ft_strlcat.c				src/str/ft_strncmp.c			src/str/ft_substr.c	\
+			src/str/ft_strchr.c					src/str/ft_strcmp.c				src/str/ft_strnstr.c \
+			src/str/ft_strdup.c  				src/str/ft_strlen.c  			src/str/ft_strrchr.c \
+			src/str/ft_strjoin.c 				src/str/ft_strmapi.c 			src/str/ft_strtrim.c \
+			src/str/ft_strlcpy.c				src/str/ft_strstr.c				src/str/ft_nm_strjoin.c \
+			src/str/ft_striteri.c \
+
+UTILS = 	src/utils/valid_int.c				src/utils/readstdin.c			src/utils/invalid_char_check.c\
+
+SRC	= 		$(CONVERT)	$(ERRORS)	$(GNL) \
+			$(IS_TO) 	$(LIST) 	$(MEM) \
+			$(PRINTF) 	$(PUTFD) 	$(STR) \
+			$(UTILS) \
+
+OBJ	= $(SRC:.c=.o)
 
 all:	$(NAME)
 
 $(NAME): $(OBJ)
-		ar rcs $(NAME) $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-bonus:	$(OBJ) $(BONUS_OBJ)
-		ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ) $(BONUS_OBJ)
+	@$(RM) $(OBJ)
 
 fclean:	clean
-		$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re:	fclean all
 
