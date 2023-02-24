@@ -1,60 +1,74 @@
 CC	= 		cc
-RM	= 		rm -f
+RM	= 		rm -rf
 CFLAGS	= 	-Wall -Wextra -Werror
 NAME = 		libft.a
+SRC_DIR =	src/
+OBJ_DIR =	objects/
 
-CONVERT = 	src/convert_int_str/ft_atoi.c		src/convert_int_str/ft_itoa.c	src/convert_int_str/ft_atol.c \
-			src/convert_int_str/ft_atoi2.c		src/convert_int_str/ft_split.c \
+CONVERT = 	convert_int_str/ft_atoi			convert_int_str/ft_itoa		convert_int_str/ft_atol \
+			convert_int_str/ft_atoi2		convert_int_str/ft_split \
 
-ERRORS = 	src/errors/error.c					src/errors/verror.c \
+ERRORS = 	errors/error					errors/verror \
 
-GNL	= 		src/gnl/get_next_line.c				src/gnl/ft_gnlinelen.c			src/gnl/get_next_line_utils.c \
+GNL	= 		gnl/get_next_line				gnl/ft_gnlinelen			gnl/get_next_line_utils \
 
-IS_TO = 	src/is_to/ft_isalnum.c				src/is_to/ft_isprint.c			src/is_to/ft_tolower.c \
-			src/is_to/ft_isascii.c				src/is_to/ft_isalpha.c			src/is_to/ft_isdigit.c \
-			src/is_to/ft_toupper.c \
+IS_TO = 	is_to/ft_isalnum				is_to/ft_isprint			is_to/ft_tolower \
+			is_to/ft_isascii				is_to/ft_isalpha			is_to/ft_isdigit \
+			is_to/ft_toupper \
 
-LIST = 		src/list/ft_lstmap.c 				src/list/ft_lstnew.c			src/list/ft_lstsize.c \
-			src/list/ft_lstdelone.c 			src/list/ft_lstiter.c 			src/list/ft_lstlast.c \
-			src/list/ft_lstadd_back.c			src/list/ft_lstclear.c			src/list/ft_lstadd_front.c \
+LIST = 		list/ft_lstmap 					list/ft_lstnew				list/ft_lstsize \
+			list/ft_lstdelone 				list/ft_lstiter 			list/ft_lstlast \
+			list/ft_lstadd_back				list/ft_lstclear			list/ft_lstadd_front \
 
-MEM =  		src/mem/ft_memcmp.c					src/mem/ft_memcpy.c				src/mem/ft_bzero.c \
-			src/mem/ft_memchr.c  				src/mem/ft_memset.c				src/mem/ft_calloc.c \
-			src/mem/ft_memmove.c \
+MEM =  		mem/ft_memcmp					mem/ft_memcpy				mem/ft_bzero \
+			mem/ft_memchr  					mem/ft_memset				mem/ft_calloc \
+			mem/ft_memmove \
 
-PRINTF = 	src/printf/ft_pf_putchar.c 			src/printf/ft_pf_putnbr.c		src/printf/ft_pf_putstr.c \
-			src/printf/ft_print_hex.c			src/printf/ft_printf.c			src/printf/ft_pf_strchr.c \
-			src/printf/ft_check_format.c \
+PRINTF = 	printf/ft_pf_putchar 			printf/ft_pf_putnbr			printf/ft_pf_putstr \
+			printf/ft_print_hex				printf/ft_printf			printf/ft_pf_strchr \
+			printf/ft_check_format \
 
-PUTFD =		src/putfd/ft_putchar_fd.c			src/putfd/ft_putendl_fd.c		src/putfd/ft_putnbr_fd.c \
-			src/putfd/ft_putstr_fd.c \
+PUTFD =		putfd/ft_putchar_fd				putfd/ft_putendl_fd			putfd/ft_putnbr_fd \
+			putfd/ft_putstr_fd \
 
-STR =   	src/str/ft_strlcat.c				src/str/ft_strncmp.c			src/str/ft_substr.c	\
-			src/str/ft_strchr.c					src/str/ft_strcmp.c				src/str/ft_strnstr.c \
-			src/str/ft_strdup.c  				src/str/ft_strlen.c  			src/str/ft_strrchr.c \
-			src/str/ft_strjoin.c 				src/str/ft_strmapi.c 			src/str/ft_strtrim.c \
-			src/str/ft_strlcpy.c				src/str/ft_strstr.c				src/str/ft_nm_strjoin.c \
-			src/str/ft_striteri.c \
+STR =   	str/ft_strlcat					str/ft_strncmp				str/ft_substr	\
+			str/ft_strchr					str/ft_strcmp				str/ft_strnstr \
+			str/ft_strdup  					str/ft_strlen  				str/ft_strrchr \
+			str/ft_strjoin 					str/ft_strmapi 				str/ft_strtrim \
+			str/ft_strlcpy					str/ft_strstr				str/ft_nm_strjoin \
+			str/ft_striteri \
 
-UTILS = 	src/utils/valid_int.c				src/utils/readstdin.c			src/utils/invalid_char_check.c \
+UTILS = 	utils/valid_int					utils/readstdin				utils/invalid_char_check \
 
-SRC	= 		$(CONVERT)	$(ERRORS)	$(GNL) \
-			$(IS_TO) 	$(LIST) 	$(MEM) \
-			$(PRINTF) 	$(PUTFD) 	$(STR) \
+SRC	= 		$(CONVERT)		$(ERRORS)		$(GNL) \
+			$(IS_TO) 		$(LIST) 		$(MEM) \
+			$(PRINTF) 		$(PUTFD) 		$(STR) \
 			$(UTILS) \
 
-OBJ	= $(SRC:.c=.o)
+SRCS = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC)))
+OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
 
 all:	$(NAME)
 
-$(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
+$(NAME): $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 
-%.o : %.c
+$(OBJ_DIR)%.o : $(SRC_DIR)%.c
+	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)/convert_int_str/
+	@mkdir -p $(OBJ_DIR)/errors/
+	@mkdir -p $(OBJ_DIR)/gnl/
+	@mkdir -p $(OBJ_DIR)/is_to/
+	@mkdir -p $(OBJ_DIR)/list/
+	@mkdir -p $(OBJ_DIR)/mem/
+	@mkdir -p $(OBJ_DIR)/printf/
+	@mkdir -p $(OBJ_DIR)/putfd/
+	@mkdir -p $(OBJ_DIR)/str/
+	@mkdir -p $(OBJ_DIR)/utils/
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@$(RM) $(OBJ)
+	@$(RM) $(OBJ_DIR)
 
 fclean:	clean
 	@$(RM) $(NAME)
