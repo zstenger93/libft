@@ -54,17 +54,7 @@ $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c
-	@mkdir -p $(OBJ_DIR)
-	@mkdir -p $(OBJ_DIR)/convert_int_str/
-	@mkdir -p $(OBJ_DIR)/errors/
-	@mkdir -p $(OBJ_DIR)/gnl/
-	@mkdir -p $(OBJ_DIR)/is_to/
-	@mkdir -p $(OBJ_DIR)/list/
-	@mkdir -p $(OBJ_DIR)/mem/
-	@mkdir -p $(OBJ_DIR)/printf/
-	@mkdir -p $(OBJ_DIR)/putfd/
-	@mkdir -p $(OBJ_DIR)/str/
-	@mkdir -p $(OBJ_DIR)/utils/
+	@mkdir -p $(@D)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
