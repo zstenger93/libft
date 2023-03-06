@@ -118,7 +118,7 @@ remove line return the rest
 */
 char	*get_next_line(int fd)
 {
-	static char	*buffer[OPEN_MAX];
+	static char	*buffer[1024];
 	char		*line;
 
 	if (read(fd, NULL, 0) == -1)
