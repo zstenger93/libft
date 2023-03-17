@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:38:11 by zstenger          #+#    #+#             */
-/*   Updated: 2023/01/29 10:55:22 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/03/17 14:21:20 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdbool.h>
 # include "get_next_line.h"
 # include "ft_printf.h"
+# include "fprintf.h"
 
 typedef struct s_list
 {
