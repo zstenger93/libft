@@ -17,12 +17,19 @@ returns a pointer to the copy */
 char	*ft_strdup(const char *s1)
 {
 	size_t	len;
-	char	*copy;
+	char	*res;
+	size_t	i;
 
-	len = ft_strlen((char *)s1) + 1;
-	copy = ft_calloc(len + 1, sizeof(char));
-	if (!copy)
+	len = ft_strlen(s1) + 1;
+	res = malloc(len * sizeof(char));
+	if (!res)
 		return (NULL);
-	ft_memcpy(copy, s1, len);
-	return (copy);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		res[i] = s1[i];
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
 }

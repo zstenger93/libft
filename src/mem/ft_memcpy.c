@@ -19,13 +19,19 @@ undefined
 */
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	size_t	count;
+	char	*new_dst;
+	char	*new_src;
 
-	i = 0;
-	while (i < n && dst != src)
+	if (!dst && !src)
+		return (NULL);
+	new_dst = (char *)dst;
+	new_src = (char *)src;
+	count = 0;
+	while (count < n)
 	{
-		((uint8_t *)dst)[i] = ((uint8_t *)src)[i];
-		i++;
+		new_dst[count] = new_src[count];
+		count++;
 	}
 	return (dst);
 }

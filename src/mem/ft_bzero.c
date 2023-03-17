@@ -20,9 +20,14 @@ pointed by 's' by writing zeros to that area'
 */
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	size_t	count;
+	char	*c;
 
-	i = 0;
-	while (i < n)
-	((uint8_t *)s)[i++] = '\0';
+	count = 0;
+	c = (char *)s;
+	while (count < n)
+	{
+		c[count] = '\0';
+		count++;
+	}
 }
