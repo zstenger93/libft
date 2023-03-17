@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:53:13 by zstenger          #+#    #+#             */
-/*   Updated: 2023/03/17 14:02:28 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/03/17 15:05:57 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ if its a plain text, simply print it out
 else checks for the type of conversion and applies it and print the result
 
 */
-int	printf_stderr(const char *format, ...)
+int	p_err(const char *format, ...)
 {
 	va_list	args;
 	int		index;

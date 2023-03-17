@@ -6,7 +6,7 @@
 /*   By: zstenger <zstenger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:31:55 by zstenger          #+#    #+#             */
-/*   Updated: 2023/03/17 14:02:48 by zstenger         ###   ########.fr       */
+/*   Updated: 2023/03/17 15:05:45 by zstenger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define HEX_LC "0123456789abcdef"
 # define HEX_UC "0123456789ABCDEF"
 
-int		printf_stderr(const char *format, ...);
+int		p_err(const char *format, ...);
 
 //utils
 void	fpf_check_format(va_list args, char conversion_type, int *input_len);
