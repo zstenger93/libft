@@ -14,15 +14,15 @@
 
 /* if no list the new node = list else change the new
 node to the first link of the list */
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new_element)
 {
-	if (!new)
+	if (!new_element)
 		return ;
 	if (!lst)
 	{
-		*lst = new;
+		*lst = new_element;
 		return ;
 	}
-	new->next = *lst;
-	*lst = new;
+	new_element->next = *lst;
+	*lst = new_element;
 }

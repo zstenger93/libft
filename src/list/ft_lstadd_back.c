@@ -16,17 +16,17 @@
 if there is no new node returns null, if no list then the new node becames the 
 list otherwise checks for the last node of the list and adds a new one
 */
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new_element)
 {
 	t_list	*the;
 
-	if (!new)
+	if (!new_element)
 		return ;
 	if (!*lst)
 	{
-		*lst = new;
+		*lst = new_element;
 		return ;
 	}
 	the = ft_lstlast(*lst);
-	the->next = new;
+	the->next = new_element;
 }
