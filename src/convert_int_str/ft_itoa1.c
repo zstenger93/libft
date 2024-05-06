@@ -1,6 +1,6 @@
 #include "../../includes/libft.h"
 
-char *itoa(int value, char *str, int base) {
+char *ft_itoa1(int value, char *str, int base) {
   char *ptr = str, *ptr1 = str, tmp_char;
   int tmp_value;
 

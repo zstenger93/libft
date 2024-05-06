@@ -6,7 +6,7 @@ SRC_DIR =	src/
 OBJ_DIR =	objects/
 
 CONVERT =	convert_int_str/ft_atoi			convert_int_str/ft_itoa		convert_int_str/ft_atol \
-			convert_int_str/ft_atoi2		convert_int_str/ft_split \
+			convert_int_str/ft_atoi2		convert_int_str/ft_split	convert_int_str/ft_itoa1 \
 
 ERRORS =	errors/error					errors/verror \
 
