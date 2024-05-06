@@ -114,6 +114,8 @@ char	**ft_split(char const *s, char c);
 
 char	*ft_itoa(int n);
 
+char	*itoa(int value, char *str, int base);
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 //bonus functions
